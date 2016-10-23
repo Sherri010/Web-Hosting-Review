@@ -1,0 +1,17 @@
+<h1> New Hosting Service </h1>
+
+<%= form_for(Host.new) do |host| %>
+  <p> Name: </p>
+  <%= host.text_field :name %>
+  <p> Rating: </p>
+  <%= host.number_field :rating ,step: :any%>
+  <p> Pros:</p>
+  <%= host.text_field :pros %>
+  <p> Cons: </p>
+  <%= host.text_field :cons %>
+  <p> Logo </p>
+  <%= host.text_field :logo %>
+  <p> URL: </p>
+  <%= host.text_field :url %>
+<%= submit_tag("Add") %>
+<% end %>

@@ -1,1 +1,13 @@
 <h1> I have all the hosts </h1>
+<%= link_to "Add Host", hosts_new_path %>
+<div>
+<%= @hosts.each do |host| %>
+<div>
+<%=  image_tag(host.logo) %>
+<p> Name: <%= host.name %> </p>
+<p> Rating: <%= host.rating %> </p>
+<%= link_to "Plans", plans_path(host.id)%>
+</div>
+  <% end %>
+
+</div>
