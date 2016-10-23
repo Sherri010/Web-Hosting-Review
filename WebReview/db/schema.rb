@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161023023950) do
+ActiveRecord::Schema.define(version: 20161023044754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,9 @@ ActiveRecord::Schema.define(version: 20161023023950) do
     t.string   "domainR"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "host_id"
+    t.index ["host_id"], name: "index_plans_on_host_id", using: :btree
   end
 
+  add_foreign_key "plans", "hosts"
 end

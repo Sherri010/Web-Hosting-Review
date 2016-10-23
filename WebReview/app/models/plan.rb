@@ -1,3 +1,3 @@
 class Plan < ApplicationRecord
-   belongs_to :hosts
+     belongs_to :host ,optional: true
 end
