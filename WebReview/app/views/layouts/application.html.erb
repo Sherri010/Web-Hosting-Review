@@ -9,6 +9,16 @@
 
   <body>
 
+<% if flash[:error] %>
+<div class="error_msg"><%= flash[:error] %></div>
+<% else %>
+<div class="success_msg"><%= flash[:success] %></div>
+<% end %>
+
     <%= yield %>
+
+    <footer class="footer">
+      <span> Sherri Aminshahidy</span> <a href="https://github.com/Sherri010/Web-Hosting-Review">GitHub</a>- <a href="http://www.toptenreviews.com/services/web-hosting/best-web-hosting/"> Data Source</a>
+    </footer>
   </body>
 </html>

@@ -12,7 +12,14 @@ class HostsController < ApplicationController
   end
   def create
     @host = Host.create(host_params)
+    if @host.valid?
+        flash[:success] = "New Hosting Service Added!"
+
     redirect_to root_path
+    else
+        flash[:error] = "Something went wrong! invalid information"
+        redirect_to  hosts_new_path
+    end
   end
 
   def edit
