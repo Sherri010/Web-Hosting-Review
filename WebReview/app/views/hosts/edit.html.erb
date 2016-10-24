@@ -1,11 +1,11 @@
 <div class="center">
-<h3 class="new_title"> Edit Hosting Service </h3>
+<h3 class="new_title"> Update Hosting Service </h3>
 <%= link_to "Home", root_path %>
 </div>
 
 <div class="edit_form container">
  <div class="row">
-<%= form_for(@host,url: update_host_path(@host)) do |host| %>
+<%= form_for(@host,url: update_host_path) do |host| %>
   <div class="five columns">
   <label> Name: </label>
   <%= host.text_field :name , :class=>"u-full-width"%>

@@ -1,6 +1,5 @@
 <div class="center">
- <%=  image_tag(@host.logo) %>
-<h2> <%= @host.name %> Available Plans</h2>
+ <%=  image_tag(@host.logo) %><br>
 <%= link_to "Back" , :back %>
 </div>
 
@@ -34,5 +33,5 @@
 <% end %>
 </tbody>
 </table>
-
+<%= link_to "Add Plan", new_plan_path(@host.id) %>
 </div>

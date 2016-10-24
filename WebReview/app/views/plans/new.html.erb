@@ -1,0 +1,49 @@
+
+<h3 class="new_title"> New Plan </h3>
+<%= link_to "Home", plans_path %>
+<div class="new_form container">
+ <div class="row">
+<%= form_for(Plan.new) do |plan| %>
+  <div class="five columns">
+  <label> Name: </label>
+  <%= plan.text_field :name , :class=>"u-full-width"%>
+  </div>
+    <div class="five columns">
+  <label> price: </label>
+  <%= plan.text_field :price , :class=>"u-full-width"%>
+  </div>
+  <div class="five columns">
+  <label> domain registration:</label>
+  <%= plan.text_field :domainR , :class=>"u-full-width"%>
+  </div>
+    <div class="five columns">
+  <label> supports:</label>
+  <%= plan.text_field :language , :class=>"u-full-width"%>
+  </div>
+    <div class="five columns">
+  <label> space: </label>
+  <%= plan.number_field :space, :class=>"u-full-width" %>
+  </div>
+  <div class="five columns">
+  <label> Sub Domains </label>
+  <%= plan.number_field :sub, :class=>"u-full-width" %>
+  </div>
+    <div class="five columns">
+  <label> Parked Domains: </label>
+  <%= plan.number_field :parked, :class=>"u-full-width" %>
+  </div>
+   <div class="five columns">
+  <label> Databases: </label>
+  <%= plan.text_field :DBtype, :class=>"u-full-width" %>
+  </div>
+    <div class="five columns">
+  <label>No. Databass: </label>
+  <%= plan.number_field :dbNo, :class=>"u-full-width" %>
+  </div>
+    <div class="five columns">
+<%= submit_tag("Add",:class=>"button-primary") %>
+</div>
+<% end %>
+   </div>
+  </div>
+ </div>

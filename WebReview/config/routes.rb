@@ -3,10 +3,15 @@ Rails.application.routes.draw do
 
  root to: 'hosts#index'
 
+  get  '/hosts/:id/plans/new',  to: 'plans#new',      as: "new_plan"
+  post '/hosts/:id',      to: 'plans#create',   as: "create_plan"
+
    get '/hosts/new',      to: 'hosts#new'
    get '/hosts/:id',      to: 'hosts#show'    , as: "plans"
    get '/hosts/:id/edit', to: 'hosts#edit'    , as: "edit_host"
  patch '/hosts/:id/',     to: 'hosts#update'  , as: "update_host"
   post '/hosts',          to: 'hosts#create'
 delete '/hosts/:id',      to: 'hosts#destroy',  as: "delete_host"
+
+
 end
