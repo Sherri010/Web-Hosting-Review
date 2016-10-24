@@ -3,12 +3,15 @@ class PlansController < ApplicationController
   end
 
   def create
-    plan = Plan.create(plan_params)
-    p "in create"
-    p Host.find(params[:id])
-    Host.find(params[:id]).plans<< plan
-    redirect_to plans_path
-
+    @plan = Plan.create(plan_params)
+   if @plan.valid?
+      flash[:success] = "plan Added!"
+      Host.find(params[:id]).plans<< @plan
+      redirect_to plans_path
+     else
+       flash[:error] = "wrong data"
+       redirect_to new_plan_path
+     end
   end
 
   private
