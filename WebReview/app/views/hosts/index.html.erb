@@ -1,15 +1,18 @@
 
+<%= link_to "Login", root_path %> -
 <%= link_to "Add Host", hosts_new_path %>
-<div>
-<%= @hosts.each do |host| %>
-<div>
-<%=  image_tag(host.logo) %>
-<h3> Name: <%= host.name %> </h3>
-<p> Rating: <%= host.rating %> </p>
-<%= link_to "Edit", edit_host_path(host.id)%>
-<%= link_to "Plans", plans_path(host.id)%>
-<%= link_to "Delete", delete_host_path(host.id), method: :delete %>
-</div>
-  <% end %>
 
+<div class="container" >
+  <div class="row">
+    <%= @hosts.each do |host| %>
+      <div class="six column host_box">
+      <%=  image_tag(host.logo) %>
+      <h3 class="title"> <%= host.name %> </h3>
+      <p class="rating"> <strong>Rating:</strong> <%= host.rating %>/10 </p>
+      <%= link_to "Edit", edit_host_path(host.id)%> -
+      <%= link_to "Plans", plans_path(host.id)%> -
+      <%= link_to "Delete", delete_host_path(host.id), method: :delete %>
+      </div>
+    <% end %>
+  </div>
 </div>

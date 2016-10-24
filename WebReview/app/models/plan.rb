@@ -11,6 +11,3 @@ class Plan < ApplicationRecord
      validates :language, presence: true
      validates :domainR, presence: true
 end
-name:"Launch",price:"$2.95/mo",
-DBtype:"MySQL - PostgreSQL",dbNo: 2 ,
- space:"Unlimited",websites:2,sub:25,parked:6,language:"PHP - Ruby - Perl - Python", domainR:"Free"})

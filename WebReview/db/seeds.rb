@@ -1,6 +1,6 @@
 
  host = Host.new({name:"inmotion", url:"http://www.inmotionhosting.com/",
-  logo:"http://imh01-inmotionhosting1.netdna-ssl.com/img/logo-imh.svg",
+  logo:"http://www.jiscript.com/img/webhosting/inmotion-hosting.png",
   rating: 9.73,pros: " InMotion provides a 90-day money back guarantee, which is the longest in the industry.",
    cons:"InMotion Hosting's Launch plan does not have the same level of customer support as its higher-priced solutions."})
  host.save
