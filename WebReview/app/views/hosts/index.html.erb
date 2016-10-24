@@ -7,7 +7,7 @@
 <hr>
 </div>
   <div class="row">
-    <%= @hosts.each do |host| %>
+    <% @hosts.each do |host| %>
       <div class="six column host_box">
       <%=  image_tag(host.logo) %>
       <h3 class="title"> <%= host.name %> </h3>
