@@ -1,12 +1,38 @@
-<%= link_to "Back" , :back %>
+<div class="center">
+ <%=  image_tag(@host.logo) %>
 <h2> <%= @host.name %> Available Plans</h2>
-<p><%= @host.name %> has a rating of <%= @host.rating %> </p>
+<%= link_to "Back" , :back %>
+</div>
 
+<div class="container">
+
+<table class="u-full-width">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Supports</th>
+      <th>Price</th>
+      <th>No. of Websites</th>
+      <th>No. of parked Domains</th>
+      <th>No. of Sub Domains</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
 <%= @plans.each do |plan| %>
-<h3> <%= plan.name%></h3>
-<p> supporsts: <%= plan.language%></p>
-<p> price: <%= plan.price %></p>
-<p> No. of Websites: <%= plan.websites %></p>
-<p> No. of Parked-Domains: <%= plan.parked %> </p>
-<p> No. of Sub-Domains: <%= plan.sub %> </p>
+<tr>
+<td> <%= plan.name%></td>
+<td> <%= plan.language%></td>
+<td> <%= plan.price %></td>
+<td> <%= plan.websites %></td>
+<td> <%= plan.parked %> </td>
+<td> <%= plan.sub %> </td>
+<td> <%= link_to "X", "/"%></td>
+<td> <%= link_to "Edit","/" %></td>
+</tr>
 <% end %>
+</tbody>
+</table>
+
+</div>

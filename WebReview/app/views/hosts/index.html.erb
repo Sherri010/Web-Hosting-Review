@@ -1,8 +1,11 @@
 
-<%= link_to "Login", root_path %> -
-<%= link_to "Add Host", hosts_new_path %>
-
 <div class="container" >
+ <h1 class="center intro"> Web Hosting Review </h1>
+ <div class="center">
+<%= link_to "Login", root_path , :class=>"center" %> -
+<%= link_to "Add Host", hosts_new_path,:class=>"center" %>
+<hr>
+</div>
   <div class="row">
     <%= @hosts.each do |host| %>
       <div class="six column host_box">

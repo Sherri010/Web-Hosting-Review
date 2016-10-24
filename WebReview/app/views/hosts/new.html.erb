@@ -1,17 +1,36 @@
-<h1> New Hosting Service </h1>
-
+<h3 class="new_title"> New Hosting Service </h3>
+<%= link_to "Home", root_path %>
+<div class="new_form container">
+ <div class="row">
 <%= form_for(Host.new) do |host| %>
-  <p> Name: </p>
-  <%= host.text_field :name %>
-  <p> Rating: </p>
-  <%= host.number_field :rating ,step: :any%>
-  <p> Pros:</p>
-  <%= host.text_field :pros %>
-  <p> Cons: </p>
-  <%= host.text_field :cons %>
-  <p> Logo </p>
-  <%= host.text_field :logo %>
-  <p> URL: </p>
-  <%= host.text_field :url %>
-<%= submit_tag("Add") %>
+  <div class="five columns">
+  <label> Name: </label>
+  <%= host.text_field :name , :class=>"u-full-width"%>
+  </div>
+    <div class="five columns">
+  <label> Rating: </label>
+  <%= host.number_field :rating ,step: :any, :class=>"u-full-width"%>
+  </div>
+    <div class="five columns">
+  <label> Pros:</label>
+  <%= host.text_field :pros , :class=>"u-full-width"%>
+  </div>
+    <div class="five columns">
+  <label> Cons: </label>
+  <%= host.text_field :cons, :class=>"u-full-width" %>
+  </div>
+  <div class="five columns">
+  <label> Logo </label>
+  <%= host.text_field :logo, :class=>"u-full-width" %>
+  </div>
+    <div class="five columns">
+  <label> URL: </label>
+  <%= host.text_field :url, :class=>"u-full-width" %>
+  </div>
+    <div class="five columns">
+<%= submit_tag("Add",:class=>"button-primary") %>
+</div>
 <% end %>
+   </div>
+  </div>
+ </div>
